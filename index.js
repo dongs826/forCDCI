@@ -1,16 +1,11 @@
+const express = require("express");
+const app = express();
+const port = 3000;
 
-const sum = (a,b) => {
-    return a+b;
-};
-const abs = (a,b) => {
-    if(a < 0){
-        a*=-1;
-    }
-    if(b<0){
-        b**=-1
-    }
-    return a+b;
-}
+app.get("/", (req, res) => {
+  res.send("<h1>Incheon National University !!</h1>");
+});
 
-exports.sum = sum;
-exports.abs = abs;
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
